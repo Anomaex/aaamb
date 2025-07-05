@@ -17,7 +17,7 @@
 ~F4::Follow()
 ~^F4::Follow(false) ; ONLY disable follow
 
-~F3::ClickToMove()
+~R::ClickToMove()
 
 ~NumLock::ToggleRun()
 
