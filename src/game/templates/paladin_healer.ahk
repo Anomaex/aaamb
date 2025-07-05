@@ -64,7 +64,6 @@ Loop
         }
         else if mana == 2
         {
-            ToolTip("MANA")
             ControlSend("{PgUp}",, game_pid) ; use mana pition
         } 
 
@@ -124,7 +123,7 @@ GetManaUse(color)
 {
     if color == 4278190335 ; blue, Divine Illumination
         return 1
-    else if color == 4294901760 ; yellow, potion
+    else if color == 4294967040 ; yellow, potion
         return 2
     return 0
 }
