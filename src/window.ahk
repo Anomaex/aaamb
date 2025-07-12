@@ -11,6 +11,7 @@ game_hwnd := ""
 
 InitSwitchWindow()
 {
+
     if game_role == 1
         return
         
@@ -63,6 +64,7 @@ RunGame()
 
         SetTimer(InitGameLogin, -1750)
     }
+
 
     InitSwitchWindow()    
 

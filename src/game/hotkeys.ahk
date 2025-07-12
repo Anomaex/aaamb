@@ -4,7 +4,7 @@
 
 
 ~F12::SetActivate()
-~^F12::SetActivate(false) ; ONLY disable is_activate
+~^F12::SetActivate(true) ; ONLY disable is_activate
 
 ~F11::ExitGame()
 
@@ -15,9 +15,9 @@
 ~F8::AcceptTrade()
 
 ~F4::Follow()
-~^F4::Follow(false) ; ONLY disable follow
+~^F4::Follow(true) ; ONLY disable follow
 
-~R::ClickToMove()
+~F3::ClickToMove()
 
 ~NumLock::ToggleRun()
 
@@ -28,3 +28,6 @@
 ~RButton up::TargetAndInteract()
 
 ~F7::DrinkEat()
+
+~WheelUp::MouseWheel()
+~WheelDown::MouseWheel()

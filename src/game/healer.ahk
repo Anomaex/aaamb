@@ -7,9 +7,3 @@ game_role := 2
 #include "../window.ahk"
 #include "login.ahk"
 #include "hotkeys.ahk"
-
-
-if template == "paladin"
-{
-    #include "templates\paladin_healer.ahk"
-}

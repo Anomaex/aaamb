@@ -1,8 +1,12 @@
 #Requires AutoHotkey v2.0
 
 
+if accounts[game_role].Length < 1
+    ExitApp()
+
 account_name := accounts[game_role][1]
 password := accounts[game_role][2]
+template := accounts[game_role][3]
 
 
 InitGameLogin()

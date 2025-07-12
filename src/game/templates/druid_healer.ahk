@@ -1,6 +1,6 @@
 #Requires AutoHotkey v2.0
 
-#include "paladin.ahk"
+#include "druid.ahk"
 #include "../gdip/gdip_helper.ahk"
 
 
@@ -51,14 +51,14 @@ PreHandler(bitmap)
 
 Handler(bitmap)
 {
-    rotation_color := GetPixelColor(bitmap, 310, 45)
-    if rotation_color == 4278190335 ; blue
+    tank_health_color := GetPixelColor(bitmap, 23, 190)
+    if tank_health_color == 4278190335 ; blue
     {
-        ControlSend("{r}",, game_pid)
-        return
+        ControlSend("{y}",, game_pid)
     }
-
-    seal_color := GetPixelColor(bitmap, 275, 45)
-    if seal_color == 4278190335 ; blue
-        ControlSend("{q}",, game_pid)
+    else if tank_health_color == 4294902015 ; purple
+    {
+        PauseFollow()
+        ControlSend("{Alt down}{y}{Alt up}",, game_pid)
+    }
 }

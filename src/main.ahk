@@ -1,32 +1,44 @@
 #Requires AutoHotkey v2.0
 #NoTrayIcon
 
+#include "../config.ahk"
+
 
 RunTank()
 {
-    Run A_ScriptDir "/game/tank.ahk"
-    Sleep(250)
+    if accounts[1].Length > 0
+    {
+        Run A_ScriptDir "/game/templates/warrior_tank_start.ahk"
+        Sleep(500)
+    }
 }
 
 
 RunDamager(index)
 {
-    Run A_ScriptDir "/game/damager.ahk " . index
-    Sleep(250)
+    if accounts[index + 2].Length > 0
+    {
+        Run A_ScriptDir "/game/templates/paladin_damager_start.ahk " . index
+        Sleep(500)
+    }
 }
 
 
 RunHealer()
 {
-    Run A_ScriptDir "/game/healer.ahk"
-    Sleep(250)
+    if accounts[2].Length > 1
+    {
+        template := accounts[2][3]
+        if template == "druid"
+            Run A_ScriptDir "/game/templates/druid_healer_start.ahk"
+        Sleep(500)
+    }
 }
 
 
 RunAll()
 {
     RunTank()
-    Sleep(250)
     Loop 3
         RunDamager(A_Index)
     RunHealer()

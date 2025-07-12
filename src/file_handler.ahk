@@ -1,7 +1,7 @@
 #Requires AutoHotkey v2.0
 
 
-cache_dir := "../../cache"
+cache_dir := "../../../cache"
 
 
 GetPath(index, is_game)
