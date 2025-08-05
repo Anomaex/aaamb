@@ -12,8 +12,6 @@
 
 ~F9::ReloadUI()
 
-~F8::AcceptTrade()
-
 ~F4::Follow()
 ~^F4::Follow(true) ; ONLY disable follow
 
@@ -27,7 +25,7 @@
 
 ~RButton up::TargetAndInteract()
 
-~F7::DrinkEat()
+~F6::DrinkEat()
 
 ~WheelUp::MouseWheel()
 ~WheelDown::MouseWheel()

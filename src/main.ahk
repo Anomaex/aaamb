@@ -8,7 +8,7 @@ RunTank()
 {
     if accounts[1].Length > 0
     {
-        Run A_ScriptDir "/game/templates/warrior_tank_start.ahk"
+        Run A_ScriptDir "/game/templates/paladin_tank_start.ahk"
         Sleep(500)
     }
 }

@@ -1,17 +1,11 @@
 #Requires AutoHotkey v2.0
 
 
-BuffTarget(special := false)
+BuffTarget()
 {
-    if !Check()
-        return
-
-    if !special
-        ControlSend("{e}",, game_pid)
-    else
-        ControlSend("{Ctrl down}{e}{Ctrl up}",, game_pid)
+    if Check()
+        ControlSend("{F8}",, game_pid)
 }
 
 
 ~F5::BuffTarget()
-~^F5::BuffTarget(true)

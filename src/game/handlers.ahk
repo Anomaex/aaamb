@@ -28,10 +28,8 @@ Check()
 
 BreakFollow()
 {
-    ControlSend("{s}",, game_pid)
-    Sleep(3)
+    Sleep(2)
     ControlSend("{Left}{Right}",, game_pid)
-    Sleep(3)
 }
 
 
@@ -89,7 +87,7 @@ Follow(is_stop := false, is_pause := false, stay_at_place := false, no_check := 
 }
 
 
-PauseFollow(no_check := false)
+PauseFollow()
 {
     Follow(, true,, true)
 }
@@ -124,20 +122,12 @@ TargetAndInteract(no_check := false)
 }
 
 
-AcceptTrade(no_check := false)
-{
-    if !no_check and !Check()
-        return
-    ControlSend("{7}",, game_pid) 
-}
-
-
 DrinkEat()
 {
     if !Check()
         return
     global is_drink_eat := true
-    PauseFollow(true)
+    PauseFollow()
     Sleep(50)
     ControlSend("{End}",, game_pid)
 }
@@ -159,19 +149,21 @@ MouseWheel()
         return
     is_mouse_wheel := true
     TargetAndInteract(true)
-    Sleep(100)
+    Sleep(25)
     is_mouse_wheel := false
 }
 
 
 ReleaseKey() {
-    Sleep(3)
     ControlSend("{Shift up}",, game_pid)
-    Sleep(3)
+    Sleep(2)
     ControlSend("{Ctrl up}",, game_pid)
-    Sleep(3)
+    Sleep(2)
     ControlSend("{Alt up}",, game_pid)
-    Sleep(3)
+    Sleep(2)
+    ControlSend("{LWin up}",, game_pid)
+    Sleep(2)
+    ControlSend("{s up}",, game_pid)
 }
 
 SetTimer(ReleaseKey, 10000) ; fix, some keys sometimes not UP command
