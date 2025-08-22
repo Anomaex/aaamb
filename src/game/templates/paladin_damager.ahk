@@ -72,6 +72,11 @@ Handler(bitmap)
         ControlSend("{e}",, game_pid)
         return
     }
+    else if rotation_color == 4294901760 ; red / Exorcism
+    {
+        ControlSend("{r}",, game_pid)
+        return
+    }
     else
     {
         buffs_color := GetPixelColor(bitmap, 275, 45)
